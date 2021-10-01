@@ -1,4 +1,14 @@
 const recordsController = require('../controller/records-controller')
+const mongoose = require('mongoose')
+
+beforeAll(async () => {
+    const url = `mongodb+srv://challengeUser:WUMglwNBaydH8Yvu@challenge-xzwqd.mongodb.net/getir-case-study?retryWrites=true`
+    await mongoose.connect(url, { useNewUrlParser: true })
+})
+
+afterAll(() => {
+    mongoose.connection.close()
+})
 
 test('recordsController happy path result', async () => {
     const testData = {

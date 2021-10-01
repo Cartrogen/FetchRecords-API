@@ -7,7 +7,6 @@ const UnexpectedError = require('../error-handling/catch-all')
 
 async function fetchRecords(req) {
     try {
-
         // Validating user input
         helper.validateInputData(req)
 
@@ -37,17 +36,15 @@ async function fetchRecords(req) {
             },
         ])
         if (tempResult) {
-
-            console.log("Records successfully retrieved from database")
+            console.log('Records successfully retrieved from database')
             result = new recordsResponse()
             result.status = responseCodes.SUCCESS
             result.code = 0
             result.msg = 'Success'
             result.records = tempResult
-            
+
             return result
         }
-
     } catch (error) {
         if (error instanceof InvalidInputData) {
             console.log(error)

@@ -1,6 +1,8 @@
 const InvalidInputDataError = require('../error-handling/invalid-input-data')
 const responseCodes = require('../helper/response-codes')
 
+
+// This function validates the data in the request object sent by user
 function validateInputData(req) {
     const dateFormat = /^\d{4}-\d{2}-\d{2}$/
 

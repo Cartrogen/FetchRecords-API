@@ -4,7 +4,7 @@ A REST API developed in NodeJS that allows a user to fetch records based on cert
 ## PART I - Download and build on local
 In order to clone this repository in your local, please see github documentation for the same - [Github clone repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). 
 
-You will need to download Node on your local machine if you haven't already done so. In order to check whether you have node or not, go to you command prompt and type the following:
+You will need to download node on your local machine if you haven't already done so. In order to check whether you have node or not, go to you command prompt and type the following:
 
     node -v
 
@@ -86,10 +86,13 @@ Once you have downloaded postman, you can paste the URL in there with appropriat
 ```
 ### Criteria and conditions to consume the API
 1. All fields in the request object must be of type and format as mentioned in the above section.
-2. startDate must be less than or equal to endDate, otherwise the API will return an error.
-3. minCount must be less than or equal to maxCount, otherwise the API will return an error
-4. Code: 0 in response object means that the call to the API was successful and the subsequent retrieval of data from the database was successful.
-5. You could get an empty array of records with a successful repsonse if there were no records matching your criteria. 
+2. The API will return records that meet the following 2 conditions:
+	1. The createdAt date falls in between the input startDate and the user input endDate.
+	2. The sum of all elements in the counts array in the database records falls in between the user input minCount and the user input maxCount
+3. startDate must be less than or equal to endDate, otherwise the API will return an error.
+4. minCount must be less than or equal to maxCount, otherwise the API will return an error
+5. Code: 0 in response object means that the call to the API was successful and the subsequent retrieval of data from the database was successful.
+6. You could get an empty array of records with a successful repsonse if there were no records matching your criteria. 
 
 ## Testing with Jest
 All tests are written using the Jest testing framework. Documenation on Jest can found here - [Jest documentation](https://jestjs.io/). Note that in order to run the tests, you will have to first terminate your API and run the following command in your terminal in your IDE:

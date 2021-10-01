@@ -7,8 +7,11 @@ const UnexpectedError = require('../error-handling/catch-all')
 
 async function fetchRecords(req) {
     try {
+
+        // Validating user input
         helper.validateInputData(req)
 
+        // Fetching data from mongoDB
         let tempResult = await records.aggregate([
             {
                 $project: {

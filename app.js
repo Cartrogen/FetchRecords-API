@@ -23,6 +23,7 @@ app.use((err, req, res, next) => {
     next()
 })
 
+// Making connection with the database
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

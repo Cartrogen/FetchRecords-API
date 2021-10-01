@@ -2,7 +2,7 @@
 A REST API developed in NodeJS that allows a user to fetch records based on certain conditions and criteria. Please follow the steps mentioned below in order to successfully consume the API.
 
 ## PART I - Download and build on local
-In order to clone this repository in your local, please see github documentation for the same - [Github clone repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). 
+In order to clone this repository in your local, please see github documentation - [Github clone repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). 
 
 You will need to download node on your local machine if you haven't already done so. In order to check whether you have node or not, go to you command prompt and type the following:
 

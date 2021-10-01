@@ -95,6 +95,6 @@ Once you have downloaded postman, you can paste the URL in there with appropriat
 6. You could get an empty array of records with a successful repsonse if there were no records matching your criteria. 
 
 ## Testing with Jest
-All tests are written using the Jest testing framework. Documenation on Jest can found here - [Jest documentation](https://jestjs.io/). Note that in order to run the tests, you will have to first terminate your API and run the following command in your terminal in your IDE:
+All tests are written using the Jest testing framework. Documention on Jest can found here - [Jest documentation](https://jestjs.io/). Note that in order to run the tests, you will have to first terminate your API and run the following command in your terminal in your IDE:
 
     npm run test --
